@@ -28,7 +28,7 @@ public class MatrixAutoDupe extends Module {
     private final Setting<Integer> delay = register(Settings.integerBuilder("TickDelay").withMinimum(1).withMaximum(100).withValue(1).build());
     private final Setting<Boolean> hotbar = register(Settings.booleanBuilder().withName("DropHotbar").withValue(false).build());
 
-    // DUO simple turn on the module near the donkey with a player near it.
+    // DUO simply turn on the module with the secone player on it with there inventory open ez.
     // SOLO just sit on a donkey and open and close your inventory and it'll dupe the items ease.
     @Override
     public void onUpdate() {
