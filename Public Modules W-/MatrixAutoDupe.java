@@ -42,7 +42,8 @@ public class MatrixAutoDupe extends Module {
                 switch (mode.getValue()) {
                     case ALL:
                         if (!mc.player.inventory.getStackInSlot(i).isEmpty()){
-                            InventoryUtil.moveItem(i,ClickType.THROW);// Simpley remove this and rewrite this with click GUI Methods
+                            //InventoryUtil.moveItem(i,ClickType.THROW);// Simpley remove this and rewrite this with click GUI Methods
+                            mc.playerController.windowClick(0,i < 9 ? i + 36 : i,0,ClickType.THROW,mc.player);//Done it for u twatz
                             return;
                         }
                         break;
@@ -52,7 +53,8 @@ public class MatrixAutoDupe extends Module {
                             if(stack.getItem() instanceof ItemBlock){
                                 Block block = ((ItemBlock) stack.getItem()).getBlock();
                                 if(block == shulkers){
-                                    InventoryUtil.moveItem(i,ClickType.THROW);// Simpley remove this and rewrite this with click GUI Methods
+                                    //InventoryUtil.moveItem(i,ClickType.THROW);// Simpley remove this and rewrite this with click GUI Methods
+                                    mc.playerController.windowClick(0,i < 9 ? i + 36 : i,0,ClickType.THROW,mc.player);
                                     return;
                                 }
                             }
