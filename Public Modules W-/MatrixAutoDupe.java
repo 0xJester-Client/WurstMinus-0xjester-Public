@@ -48,15 +48,12 @@ public class MatrixAutoDupe extends Module {
                         }
                         break;
                     case SHULKERS:
-                        for(Block shulkers: BlockInteractionHelper.shulkerList){
-                            ItemStack stack = mc.player.inventory.getStackInSlot(i);
-                            if(stack.getItem() instanceof ItemBlock){
-                                Block block = ((ItemBlock) stack.getItem()).getBlock();
-                                if(block == shulkers){
-                                    //InventoryUtil.moveItem(i,ClickType.THROW);// Simpley remove this and rewrite this with click GUI Methods
-                                    mc.playerController.windowClick(0,i < 9 ? i + 36 : i,0,ClickType.THROW,mc.player);
-                                    return;
-                                }
+                        ItemStack stack = mc.player.inventory.getStackInSlot(i);
+                        if(stack.getItem() instanceof ItemBlock){
+                            Block block = ((ItemBlock) stack.getItem()).getBlock();
+                            if(block instanceof BlockShulkerBox){
+                                InventoryUtil.moveItem(i,ClickType.THROW);// Simpley remove this and rewrite this with click GUI Methods
+                                return;
                             }
                         }
                         break;
