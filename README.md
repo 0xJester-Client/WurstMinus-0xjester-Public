@@ -1,4 +1,5 @@
-# WurstMinus-Public
-Public shite from the Private client called Wurst- / Wurst- 2
+# Wurst- & 0xJester Public
 
-3rd#1703
+This repository will contain old or disused modules from the clients.
+
+Wurst- clients for 1.12.2 will no longer be worked on but have had portions from those clients copied over to 0xJester.
